@@ -1,0 +1,3 @@
+[service]
+healthcheckPath = "/healthz"
+healthcheckTimeout = 30
