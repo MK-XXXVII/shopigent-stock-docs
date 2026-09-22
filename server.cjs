@@ -51,6 +51,9 @@ function shell(title, bodyHtml) {
 <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 <script>tailwind.config={darkMode:"class"}</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>📦</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
 <style>
 /* ── Design Tokens ── */
 :root{--bg:#f5f6fa;--text:#1a1a2e;--card:rgba(255,255,255,0.85);--card-glass:rgba(255,255,255,0.7);--border:rgba(0,0,0,0.08);--primary:#452b60;--accent:#269982;--accent-light:rgba(38,153,130,0.12)}
@@ -58,7 +61,7 @@ function shell(title, bodyHtml) {
 
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.5;overflow-x:hidden}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6;font-weight:400;overflow-x:hidden}
 
 /* ── Animations ── */
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
@@ -83,10 +86,10 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:va
 /* ── Header / Nav ── */
 .docs-header{background:var(--card);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 20px;position:sticky;top:0;z-index:50;animation:slideDown 0.4s ease}
 .docs-nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;position:relative}
-.docs-nav .logo{font-weight:800;font-size:1.2rem;color:var(--accent);text-decoration:none;white-space:nowrap;transition:opacity 0.2s}
+.docs-nav .logo{font-weight:700;font-size:1.2rem;color:var(--accent);text-decoration:none;white-space:nowrap;transition:opacity 0.2s}
 .docs-nav .logo:hover{opacity:0.8}
 .nav-links{display:flex;gap:6px;align-items:center}
-.nav-links a{padding:8px 14px;border-radius:8px;text-decoration:none;color:var(--text);font-size:0.85rem;font-weight:500;transition:all 0.2s;position:relative}
+.nav-links a{padding:8px 14px;border-radius:8px;text-decoration:none;color:var(--text);font-size:0.85rem;font-weight:400;transition:all 0.2s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:2px;background:var(--accent);border-radius:1px;transition:width 0.25s}
 .nav-links a:hover::after,.nav-links a.active::after{width:70%}
 .nav-links a:hover,.nav-links a.active{background:var(--accent-light);color:var(--accent)}
@@ -100,7 +103,7 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:va
 .hero{text-align:center;padding:60px 24px 48px;max-width:800px;margin:0 auto;position:relative;animation:fadeIn 0.8s ease}
 .urgency-badge{display:inline-block;padding:8px 20px;border-radius:24px;font-size:0.8rem;font-weight:600;margin-bottom:24px;animation:fadeIn 0.6s ease 0.2s both;background:linear-gradient(135deg,#fef3c7,#fde68a);color:#92400e;border:1px solid #f59e0b;animation:badgePulse 2s ease-in-out infinite}
 .dark .urgency-badge{background:linear-gradient(135deg,#451a03,#78350f);color:#fde68a;border-color:#b45309}
-.hero h1{font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:800;margin-bottom:16px;line-height:1.15;animation:fadeInUp 0.7s ease 0.1s both}
+.hero h1{font-size:clamp(1.6rem,4.5vw,2.6rem);font-weight:700;margin-bottom:16px;line-height:1.15;animation:fadeInUp 0.7s ease 0.1s both}
 .hero h1 .gradient{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .typewriter{display:inline;border-right:3px solid var(--accent);padding-right:2px;animation:type-cursor 0.8s step-end infinite}
 .hero p{font-size:clamp(0.95rem,2.5vw,1.1rem);opacity:0.85;margin-bottom:28px;line-height:1.6;max-width:650px;margin-left:auto;margin-right:auto;animation:fadeInUp 0.7s ease 0.25s both}
@@ -117,7 +120,7 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:va
 .section{padding:60px 20px;position:relative}
 .section-inner{max-width:900px;margin:0 auto}
 .section-label{text-transform:uppercase;letter-spacing:2px;font-size:0.75rem;font-weight:700;color:var(--accent);margin-bottom:8px}
-.section h2{font-size:clamp(1.3rem,3.5vw,1.8rem);font-weight:800;margin-bottom:16px;color:var(--primary);line-height:1.2}
+.section h2{font-size:clamp(1.3rem,3.5vw,1.8rem);font-weight:700;margin-bottom:16px;color:var(--primary);line-height:1.2}
 .section p{font-size:clamp(0.9rem,2vw,1rem);line-height:1.7;margin-bottom:16px;opacity:0.85}
 .section.accent-bg{background:var(--card)}
 
@@ -161,7 +164,7 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:va
 
 /* Pricing */
 .pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
-.pricing-card{background:var(--card-glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:14px;padding:28px 20px;text-align:center;transition:all 0.3s;position:relative}
+.pricing-card{background:var(--card-glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:14px;padding:28px 20px 20px;text-align:center;transition:all 0.3s;position:relative;display:flex;flex-direction:column}
 .pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(38,153,130,0.1)}
 .pricing-card.featured{border-color:var(--accent);box-shadow:0 8px 24px rgba(38,153,130,0.15)}
 .pricing-card.featured::before{content:'Most Popular';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),#1d7a66);color:#fff;padding:4px 16px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.5px;box-shadow:0 2px 8px rgba(38,153,130,0.3)}
@@ -169,10 +172,10 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:va
 .pricing-card .price{font-size:2rem;font-weight:800;color:var(--primary);margin-bottom:4px}
 .pricing-card .price span{font-size:0.85rem;font-weight:400;opacity:0.5}
 .pricing-card .desc{font-size:0.75rem;opacity:0.5;margin-bottom:16px}
-.pricing-card ul{list-style:none;padding:0;margin:16px 0 20px;text-align:left}
+.pricing-card ul{list-style:none;padding:0;margin:16px 0 20px;text-align:left;flex:1}
 .pricing-card li{padding:5px 0;font-size:0.83rem;line-height:1.4;opacity:0.85}
 .pricing-card li::before{content:'✓ ';color:var(--accent);font-weight:700}
-.pricing-card .btn-pricing{display:inline-block;padding:10px 24px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;transition:all 0.25s;border:2px solid var(--accent);color:var(--accent);background:transparent}
+.pricing-card .btn-pricing{display:inline-block;padding:10px 24px;border-radius:8px;font-weight:600;font-size:0.85rem;text-decoration:none;transition:all 0.25s;border:2px solid var(--accent);color:var(--accent);background:transparent;margin-top:auto}
 .pricing-card .btn-pricing:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
 .pricing-card.featured .btn-pricing{background:var(--accent);color:#fff}
 .pricing-card.featured .btn-pricing:hover{background:#1d7a66;border-color:#1d7a66}
@@ -431,7 +434,7 @@ function renderHome() {
     <h2>Start with the free development plan. Upgrade when you're ready.</h2>
     <div class="pricing-grid">
       <div class="pricing-card"><h3>Free</h3><div class="price">$0<span>/mo</span></div><div class="desc">Development store</div><ul><li>Up to 10 bundles</li><li>Basic deduction</li></ul><a href="https://apps.shopify.com/shopigent-stock" class="btn-pricing">Start Free</a></div>
-      <div class="pricing-card featured"><h3>Starter</h3><div class="price">$19<span>/mo</span></div><div class="desc">Live store</div><ul><li>Unlimited bundles</li><li>Auto bundle deduction</li><li>Mix &amp; Match</li><li>Storefront widget</li><li>7-day free trial</li></ul><a href="https://apps.shopify.com/shopigent-stock" class="btn-pricing">Try Free for 7 Days</a></div>
+      <div class="pricing-card featured"><h3>Starter</h3><div class="price">$19<span>/mo</span></div><div class="desc">Live store</div><ul><li>Unlimited bundles</li><li>Auto bundle deduction</li><li>Mix &amp; Match</li><li>Storefront widget</li><li>7-day free trial</li></ul><a href="https://apps.shopify.com/shopigent-stock" class="btn-pricing">Start 7-Day Trial</a></div>
       <div class="pricing-card"><h3>Growth</h3><div class="price">$49<span>/mo</span></div><div class="desc">Everything in Starter +</div><ul><li>AI forecasting</li><li>Purchase orders</li><li>Warehouse sync</li><li>Inventory Ledger</li></ul><a href="https://apps.shopify.com/shopigent-stock" class="btn-pricing">Get Started</a></div>
       <div class="pricing-card"><h3>Pro</h3><div class="price">$99<span>/mo</span></div><div class="desc">Everything in Growth +</div><ul><li>AI Agent (MCP)</li><li>Priority support</li><li>Custom integrations</li></ul><a href="https://apps.shopify.com/shopigent-stock" class="btn-pricing">Go Pro</a></div>
     </div>
